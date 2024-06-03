@@ -1,7 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render # noqa
 
 
 # Create your views here.
-def home(request):
-    """view to display the home page"""
-    return HttpResponse("Hello world")
+def index(request):
+    """ view returns index.html """
+
+    return render(request, 'home/index.html')
